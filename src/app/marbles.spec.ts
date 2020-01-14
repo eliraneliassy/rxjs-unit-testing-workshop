@@ -3,7 +3,7 @@ import { concatMap, map, mapTo, mergeMap, switchMap } from 'rxjs/operators';
 
 describe('Marble testing operators', () => {
 
-    describe('Map', () => {
+    xdescribe('Map', () => {
         it('should add "1" to each value emitted', () => {
             const source = cold('-a-b-c-|', { a: 1, b: 2, c: 3 });
             const expected = null; // ANSWER HERE
@@ -14,7 +14,7 @@ describe('Marble testing operators', () => {
     });
 
 
-    describe('MergeMap', () => {
+    xdescribe('MergeMap', () => {
         it('should maps to inner observable and flattens', () => {
 
             const obs1 = cold('-a-------a--|', { a: 'a' });
@@ -26,7 +26,7 @@ describe('Marble testing operators', () => {
         });
     });
 
-    describe('SwitchMap', () => {
+    xdescribe('SwitchMap', () => {
         it('should maps each value to inner observable and flattens', () => {
             const obs1 = cold('-a-b-|', { a: 10, b: 30 });
             const obs2 = cold('a-a-a|', { a: 10 });
